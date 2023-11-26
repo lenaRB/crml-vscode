@@ -1,0 +1,72 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "crml",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#object-types"
+		},
+		{
+			"include": "#user-operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.crml",
+				"match": "\\b(if|then|else|while|for|return|is|and|or|new|at|not|card)\\b"
+			}, {
+				"name": "keyword.other.crml",
+				"match": "\\b(true|false|undefined|undecided|time|start|end)\\b"
+			},
+			{
+				"name": "keyword.other.package.crml",
+				"match": "\\b(model|external)\\b"
+			}
+		]
+			
+		},
+		"object-types":{
+			"name": "storage.type.crml",
+			"match": "\\b(Boolean|Integer|Real|Clock|Event|Period|String|Operator|Template)\\b"
+		},
+
+		"strings": {
+			"name": "string.quoted.double.crml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.crml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"user-operators": {
+			"name": "string.quoted.single.crml",
+			"begin": "\\'",
+			"end": "\\'"
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.as.crml",
+				"match":  "(\\/\\/).*$\n?"
+			},
+			{
+				"name": "comment.block.crml",
+				"begin":  "(\\/\\*)",
+				"end": "(\\*\\/)"
+			}]
+		}
+
+	},
+	"scopeName": "source.crml"
+}

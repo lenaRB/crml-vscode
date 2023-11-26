@@ -1,1 +1,3 @@
-# crml-vscode
+# crml README
+
+Syntax highlighting for CRML

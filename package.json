@@ -1,0 +1,25 @@
+{
+  "name": "crml",
+  "displayName": "crml",
+  "description": "requirement language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "crml",
+      "aliases": ["crml", "crml"],
+      "extensions": [".crml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "crml",
+      "scopeName": "source.crml",
+      "path": "./syntaxes/crml.tmLanguage.json"
+    }]
+  }
+}
