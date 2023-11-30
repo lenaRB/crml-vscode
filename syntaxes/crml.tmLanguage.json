@@ -22,7 +22,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.crml",
-				"match": "\\b(if|then|else|while|for|return|is|and|or|new|at|not|card)\\b"
+				"match": "\\b(if|then|else|while|for|is|and|or|new|at|not|card|integrate|filter|apply|on)\\b"
 			}, {
 				"name": "keyword.other.crml",
 				"match": "\\b(true|false|undefined|undecided|time|start|end)\\b"
@@ -36,7 +36,7 @@
 		},
 		"object-types":{
 			"name": "storage.type.crml",
-			"match": "\\b(Boolean|Integer|Real|Clock|Event|Period|String|Operator|Template)\\b"
+			"match": "\\b(Boolean|Integer|Real|Clock|Event|Period|Periods|String|Operator|Template)\\b"
 		},
 
 		"strings": {
